@@ -1,0 +1,17 @@
+<html> 
+    <head>
+        <title>
+            {% block title_name %}
+            {% endblock %}
+        </title>
+        <h1>
+            {% block heading_name %}
+            {% endblock %}
+        </h1> 
+    </head>
+    
+    <body>
+        {% block content %}
+        {% endblock %}
+    </body>
+</html>

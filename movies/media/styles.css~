@@ -1,0 +1,10 @@
+body
+{
+	font-family: arial, helvetica, sans-serif;
+}
+
+h1
+{
+margin-bottom:0;
+background-color:#87CEFF;
+}
