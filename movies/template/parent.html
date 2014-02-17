@@ -1,65 +1,10 @@
 {% extends "project.html" %}
 
-<style>
-body
-{
-    font-family: arial, helvetica, sans-serif;
-}
-table
-{
-    border-collapse: collapse;
-	margin-bottom: 3em;
-	font-size: 100%;
-}
-tr:hover, td.start:hover
-{
-	background: #FF9;
-}
-th, td
-{
-    padding: .3em .5em;
-}
-th
-{
-    font-weight: normal;
-    text-align: center;
-    background: url(tabletree-arrow.gif) no-repeat 2px 50%;
-    padding-left: 15px;
-}
-th.Movie { width: 20em; }
-th.Release_Date { width: 20em; }
-th.MPAA_Rating { width: 20em; }
-
-thead th
-{
-	background: #c6ceda;
-	border-color: #fff #fff #888 #fff;
-	border-style: solid;
-	border-width: 1px 1px 2px 1px;
-	padding-left: .5em;
-}
-
-tbody th.start
-{
-    background: url(tabletree-dots.gif) 18px 54% no-repeat;
-	padding-left: 26px;
-}
-
-h1
-{
-	margin-bottom:0;
-	background-color:#87CEFF;
-	text-align:center;
-}
-</style>
-
 {% block title_name %}
-    {{ node.title }}
     movies
 {% endblock %}
 
 {% block heading_name %}
-   {{ node.title }}
    MOVIES
 {% endblock %}
 
@@ -78,11 +23,7 @@ h1
         <tbody>
             <tr>
                 <td class="start">
-                    {% if addr %}
                         <a href="/{{ addr }}{{ movie.title }}/">{{ movie.title }}</a>
-                    {% else %}
-                        <a href="/Movies/">{{ movie.title }}</a>
-                    {% endif %}
                 </td>
                 <td>{{ movie.release_dates.theater }}</td>
                 <td>{{ movie.mpaa_rating }}</td>

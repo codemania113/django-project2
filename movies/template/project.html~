@@ -1,5 +1,6 @@
 <html> 
     <head>
+        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}styles.css" >
         <title>
             {% block title_name %}
             {% endblock %}
@@ -10,7 +11,7 @@
         </h1> 
     </head>
     
-    <body>
+    <body bgcolor="#EEEEE">
         {% block content %}
         {% endblock %}
     </body>

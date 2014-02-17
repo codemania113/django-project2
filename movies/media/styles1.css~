@@ -1,0 +1,51 @@
+html,body
+{
+    background-color:#EEEEEE;
+    text-align: center;
+     
+}
+h1
+{
+	margin-bottom:0;
+	background-color:#87CEFF;
+	text-align:center;
+}
+table
+{
+    border-collapse: collapse;
+    margin-bottom: 3em;
+    font-size: 100%;
+}
+tr:hover, td.start:hover
+{
+	background: #FF9;
+}
+th, td
+{
+    padding: .3em .5em;
+}
+th
+{
+    font-weight: normal;
+    text-align: center;
+    background: url(tabletree-arrow.gif) no-repeat 2px 50%;
+    padding-left: 15px;
+}
+th.Movie { width: 20em; }
+th.Release_Date { width: 20em; }
+th.MPAA_Rating { width: 20em; }
+
+thead th
+{
+	background: #c6ceda;
+	border-color: #fff #fff #888 #fff;
+	border-style: solid;
+	border-width: 1px 1px 2px 1px;
+	padding-left: .5em;
+}
+
+tbody th.start
+{
+    background: url(tabletree-dots.gif) 18px 54% no-repeat;
+	padding-left: 26px;
+}

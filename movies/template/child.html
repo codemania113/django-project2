@@ -32,13 +32,18 @@
         <br>
         <i>{{ node.synopsis }}</i>
         <br>
-        <br>
-        <br>
         <b>CAST:</b>
         <br>
         {% for cast in node.abridged_cast %}
-            <i>{{ cast.name }}    playing    </i>
-            <i>{{ cast.characters }}</i>
+            <i>{{ cast.name }}  </i>
+            {% if cast.characters %}
+                <i> playing </i>
+                <br>
+                {% for role in cast.characters %}
+                    <i>{{ role }}</i>
+                    <br>
+                {% endfor %}
+            {% endif %}
             <br>
             <br>
         {% endfor %}        

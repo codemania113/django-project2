@@ -9,7 +9,7 @@
 
     <div id="header" style="background-color:#FFA500;">
         <h1 style="margin-bottom:0;text-align:center;">
-        {{ node.title }}
+            {{ node.title }}
         </h1>
     </div>
 
@@ -37,8 +37,15 @@
         <b>CAST:</b>
         <br>
         {% for cast in node.abridged_cast %}
-            <i>{{ cast.name }}    playing    </i>
-            <i>{{ cast.characters }}</i>
+            <i>{{ cast.name }}  </i>
+            {% if cast.characters %}
+                <i> playing </i>
+                <br>
+                {% for role in cast.characters %}
+                    <i>{{ role }}</i>
+                    <br>
+                {% endfor %}
+            {% endif %}
             <br>
             <br>
         {% endfor %}        
