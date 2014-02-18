@@ -1,19 +1,13 @@
 <html> 
     <head>
-        <link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}styles.css" >
-        <title>
-            {% block title_name %}
-            {% endblock %}
-        </title>
-        <h1>
-            <center>
-            {% block heading_name %}
-            {% endblock %}
-            </center>
-        </h1> 
+        {% block title_name %}
+        {% endblock %}
     </head>
     
     <body bgcolor="#EEEEE">
+        {% block heading_name %}
+        {% endblock %}
+
         {% block content %}
         {% endblock %}
     </body>
