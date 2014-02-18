@@ -1,11 +1,18 @@
 {% extends "project.html" %}
 
 {% block title_name %}
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}styles1.css" >
+<title>
     movies
+</title>
 {% endblock %}
 
 {% block heading_name %}
-   MOVIES
+<h1>
+    <center>
+        MOVIES
+    </center>
+</h1>
 {% endblock %}
 
 
@@ -13,10 +20,10 @@
 <table summary="table for movie release in 2014" align="center">
     <thead>
         <tr>
-            <th class="Movie">Movie</th>
-            <th class="Release_Date">Release Date</th>
-            <th class="MPAA Rating">MPAA Rating</th>
-            <th class="Poster">Poster</th> 
+            <th class="movie">Movie</th>
+            <th class="release_date">Release Date</th>
+            <th class="mpaa_rating">MPAA Rating</th>
+            <th class="poster">Poster</th> 
         </tr>
     </thead>
     {% for movie in node.movies %}
