@@ -1,15 +1,19 @@
-div
-.container
+div.container
 {
     width:100%;
     height:100%;
     float:top;
 }
-.header
+div.header
 {
     background-color:#FFA500;
 }
-.menu
+h1
+{
+    margin-bottom:0;
+    text-align:center;
+}
+div.menu
 {
     background-color:#FFD700;
     height:90%;
@@ -17,11 +21,10 @@ div
     float:left;
     text-align:center;
 }
-.content
+div.content
 {
     background-color:#EEEEEE;
     height:90%;
     width:80%;
     float:left;
 }
-
