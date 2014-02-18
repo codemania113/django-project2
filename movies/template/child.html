@@ -1,51 +1,90 @@
 {% extends "project.html" %}
 
 {% block title_name %}
-    {{ node.title }}
+<style>
+div.container
+{
+    width:100%;
+    height:100%;
+    float:top;
+}
+div.header
+{
+    background-color:#FFA500;
+}
+h1
+{
+    margin-bottom:0;
+    text-align:center;
+}
+div.menu
+{
+    background-color:#FFD700;
+    height:90%;
+    width:20%;
+    float:left;
+    text-align:center;
+}
+div.content
+{
+    background-color:#EEEEEE;
+    height:90%;
+    width:80%;
+    float:left;
+}
+</style>
+
+<link rel="stylesheet" type="text/css" href="{{ MEDIA_URL }}styles2.css" >
+    <title>
+        {{ node.title }}
+    </title>
 {% endblock %}
 
 {% block content %}
-    <div id="container" style="width:100%;height:100%;float:top;">
+    <div class="container">
 
-    <div id="header" style="background-color:#FFA500;">
-        <h1 style="margin-bottom:0;text-align:center;">
+    <div class="header">
+        <h1>
             {{ node.title }}
         </h1>
     </div>
 
-    <div id="menu" style="background-color:#FFD700;height:90%;width:20%;float:left;text-align:center;">
+    <div class="menu">
         <img src="{{ node.posters.detailed }}">
         </img>
-        <br>
-        <b>Rating:</b>
-        <br>
-        <i>Critics Score:</i>
-        {{ node.ratings.critics_score }}
-        <br>
-        <i>Audience Score:</i>
-        {{ node.ratings.audience_score }}
+        <p>
+            <b>Rating:</b>
+        </p>
+        <p>
+            <i>Critics Score:</i>
+            {{ node.ratings.critics_score }}
+        </p>
+        <p>
+            <i>Audience Score:</i>
+            {{ node.ratings.audience_score }}
+        </p>
         
     </div>
 
-    <div id="content" style="background-color:#EEEEEE;height:90%;width:80%;float:left;">
-        <br>
-        <br>
-        <i>{{ node.synopsis }}</i>
-        <br>
-        <b>CAST:</b>
-        <br>
+    <div class="content">
+        <p>
+            <i>{{ node.synopsis }}</i>
+        </p>
+        <p>
+            <b>CAST:</b>
+        </p>
         {% for cast in node.abridged_cast %}
-            <i>{{ cast.name }}  </i>
-            {% if cast.characters %}
-                <i> playing </i>
-                <br>
-                {% for role in cast.characters %}
-                    <i>{{ role }}</i>
+            <p>
+                <i>{{ cast.name }}</i>
+                {% if cast.characters %}
+                    <i> playing </i>
                     <br>
-                {% endfor %}
-            {% endif %}
-            <br>
-            <br>
+                    {% for role in cast.characters %}
+                        <i>{{ role }}</i>
+                        <br>
+                    {% endfor %}
+                {% endif %}
+            </p>
         {% endfor %}        
     </div>
 {% endblock %}
