@@ -1,4 +1,4 @@
-html,body
+body
 {
     background-color:#EEEEEE;
     text-align: center;
@@ -31,9 +31,10 @@ th
     background: url(tabletree-arrow.gif) no-repeat 2px 50%;
     padding-left: 15px;
 }
-th.Movie { width: 20em; }
-th.Release_Date { width: 20em; }
-th.MPAA_Rating { width: 20em; }
+th.movie { width: 20em; }
+th.release_Date { width: 20em; }
+th.mpaa_rating { width: 20em; }
+th.poster { width: 20em; }
 
 thead th
 {
